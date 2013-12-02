@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Build-Jdk: 1.7.0_40
-Built-By: Julien
-Created-By: Maven Integration for Eclipse
-url: http://maven-site.nuiton.org/mavenpom/reader-parent/reader-servic
- es
-

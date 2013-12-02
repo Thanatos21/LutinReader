@@ -6,27 +6,49 @@ package fr.alma.middleware1314.services.bean;
 import java.net.URL;
 import java.util.Date;
 
-import javax.ejb.Remote;
-import javax.ejb.Stateless;
+import javax.persistence.Basic;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 import fr.alma.middleware1314.services.bean.remote.ContentRemote;
-import fr.alma.middleware1314.services.bean.remote.UserRemote;
 
 /**
  * @author Julien Bizeul et Éric Chevalier
  *
  */
-@Stateless
-@Remote(UserRemote.class)
+@Entity
+@Table(name="CONTENT")
 public class Content implements ContentRemote {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Long contentId;
+	
+	@Basic()
 	private String contentTitle;
+	
+	@Basic()
 	private URL link;
+	
+	@Basic()
 	private Date pubDate;
+	
+	@Basic()
 	private String description;
+	
+	@Basic()
 	private int guid;
+	
+	@Basic()
 	private String author;
+	
+	@Basic()
 	private String category;
+	
+	@Basic()
 	private String comments;
 	
 	

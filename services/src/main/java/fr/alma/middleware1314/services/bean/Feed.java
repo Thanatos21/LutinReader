@@ -8,28 +8,54 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import javax.ejb.Remote;
-import javax.ejb.Stateless;
+import javax.persistence.Basic;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 import fr.alma.middleware1314.services.bean.remote.FeedRemote;
-import fr.alma.middleware1314.services.bean.remote.UserRemote;
 
 /**
  * @author Julien Bizeul et Éric Chevalier
  *
  */
-@Stateless
-@Remote(UserRemote.class)
+@Entity
+@Table(name="FEED")
 public class Feed implements FeedRemote {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Long feedId;
+	
+	@Basic()
 	private String feedTitle;
+
+	@Basic()
 	private String description;
+
+	@Basic()
 	private URL link;
+
+	@Basic()
 	private Date pubDate;
+
+	@Basic()
 	private Date lastBuildDate;
+
+	@Basic()
 	private String image;
+
+	@Basic()
 	private String language;
+
+	@Basic()
 	private String enclosure;
+
+	@Basic()
+	@OneToMany
 	private List<Content> contents;
 	
 	
