@@ -3,6 +3,7 @@
  */
 package fr.alma.middleware1314.services.bean;
 
+import java.io.Serializable;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Date;
@@ -16,15 +17,13 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import fr.alma.middleware1314.services.bean.remote.FeedRemote;
-
 /**
  * @author Julien Bizeul et Éric Chevalier
  *
  */
 @Entity
 @Table(name="FEED")
-public class Feed implements FeedRemote {
+public class Feed implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -92,7 +91,6 @@ public class Feed implements FeedRemote {
 	/* (non-Javadoc)
 	 * @see fr.alma.middleware1314.services.bean.FeedRemote#getFeedTitle()
 	 */
-	@Override
 	public String getFeedTitle() {
 		return feedTitle;
 	}
@@ -100,7 +98,6 @@ public class Feed implements FeedRemote {
 	/* (non-Javadoc)
 	 * @see fr.alma.middleware1314.services.bean.FeedRemote#setFeedTitle(java.lang.String)
 	 */
-	@Override
 	public void setFeedTitle(String feedTitle) {
 		this.feedTitle = feedTitle;
 	}
@@ -108,7 +105,6 @@ public class Feed implements FeedRemote {
 	/* (non-Javadoc)
 	 * @see fr.alma.middleware1314.services.bean.FeedRemote#getDescription()
 	 */
-	@Override
 	public String getDescription() {
 		return description;
 	}
@@ -116,7 +112,6 @@ public class Feed implements FeedRemote {
 	/* (non-Javadoc)
 	 * @see fr.alma.middleware1314.services.bean.FeedRemote#setDescription(java.lang.String)
 	 */
-	@Override
 	public void setDescription(String description) {
 		this.description = description;
 	}
@@ -124,7 +119,6 @@ public class Feed implements FeedRemote {
 	/* (non-Javadoc)
 	 * @see fr.alma.middleware1314.services.bean.FeedRemote#getLink()
 	 */
-	@Override
 	public URL getLink() {
 		return link;
 	}
@@ -132,7 +126,6 @@ public class Feed implements FeedRemote {
 	/* (non-Javadoc)
 	 * @see fr.alma.middleware1314.services.bean.FeedRemote#setLink(java.net.URL)
 	 */
-	@Override
 	public void setLink(URL link) {
 		this.link = link;
 	}
@@ -140,7 +133,6 @@ public class Feed implements FeedRemote {
 	/* (non-Javadoc)
 	 * @see fr.alma.middleware1314.services.bean.FeedRemote#getPubDate()
 	 */
-	@Override
 	public Date getPubDate() {
 		return pubDate;
 	}
@@ -148,7 +140,6 @@ public class Feed implements FeedRemote {
 	/* (non-Javadoc)
 	 * @see fr.alma.middleware1314.services.bean.FeedRemote#setPubDate(java.util.Date)
 	 */
-	@Override
 	public void setPubDate(Date pubDate) {
 		this.pubDate = pubDate;
 	}
@@ -156,7 +147,6 @@ public class Feed implements FeedRemote {
 	/* (non-Javadoc)
 	 * @see fr.alma.middleware1314.services.bean.FeedRemote#getLastBuildDate()
 	 */
-	@Override
 	public Date getLastBuildDate() {
 		return lastBuildDate;
 	}
@@ -164,7 +154,6 @@ public class Feed implements FeedRemote {
 	/* (non-Javadoc)
 	 * @see fr.alma.middleware1314.services.bean.FeedRemote#setLastBuildDate(java.util.Date)
 	 */
-	@Override
 	public void setLastBuildDate(Date lastBuildDate) {
 		this.lastBuildDate = lastBuildDate;
 	}
@@ -172,7 +161,6 @@ public class Feed implements FeedRemote {
 	/* (non-Javadoc)
 	 * @see fr.alma.middleware1314.services.bean.FeedRemote#getImage()
 	 */
-	@Override
 	public String getImage() {
 		return image;
 	}
@@ -180,7 +168,6 @@ public class Feed implements FeedRemote {
 	/* (non-Javadoc)
 	 * @see fr.alma.middleware1314.services.bean.FeedRemote#setImage(java.lang.String)
 	 */
-	@Override
 	public void setImage(String image) {
 		this.image = image;
 	}
@@ -188,7 +175,6 @@ public class Feed implements FeedRemote {
 	/* (non-Javadoc)
 	 * @see fr.alma.middleware1314.services.bean.FeedRemote#getLanguage()
 	 */
-	@Override
 	public String getLanguage() {
 		return language;
 	}
@@ -196,7 +182,6 @@ public class Feed implements FeedRemote {
 	/* (non-Javadoc)
 	 * @see fr.alma.middleware1314.services.bean.FeedRemote#setLanguage(java.lang.String)
 	 */
-	@Override
 	public void setLanguage(String language) {
 		this.language = language;
 	}
@@ -204,7 +189,6 @@ public class Feed implements FeedRemote {
 	/* (non-Javadoc)
 	 * @see fr.alma.middleware1314.services.bean.FeedRemote#getEnclosure()
 	 */
-	@Override
 	public String getEnclosure() {
 		return enclosure;
 	}
@@ -212,7 +196,6 @@ public class Feed implements FeedRemote {
 	/* (non-Javadoc)
 	 * @see fr.alma.middleware1314.services.bean.FeedRemote#setEnclosure(java.lang.String)
 	 */
-	@Override
 	public void setEnclosure(String enclosure) {
 		this.enclosure = enclosure;
 	}
@@ -220,7 +203,6 @@ public class Feed implements FeedRemote {
 	/* (non-Javadoc)
 	 * @see fr.alma.middleware1314.services.bean.FeedRemote#getContents()
 	 */
-	@Override
 	public List<Content> getContents() {
 		return contents;
 	}
@@ -228,7 +210,6 @@ public class Feed implements FeedRemote {
 	/* (non-Javadoc)
 	 * @see fr.alma.middleware1314.services.bean.FeedRemote#setContents(java.util.List)
 	 */
-	@Override
 	public void setContents(List<Content> contents) {
 		this.contents = contents;
 	}

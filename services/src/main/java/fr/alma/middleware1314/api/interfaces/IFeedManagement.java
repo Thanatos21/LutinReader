@@ -10,6 +10,7 @@ import fr.alma.middleware1314.services.bean.Feed;
 import fr.alma.middleware1314.services.bean.User;
 
 
+
 /**
  * @author Julien Bizeul et Éric Chevalier
  * 

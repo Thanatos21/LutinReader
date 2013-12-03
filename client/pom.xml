@@ -20,7 +20,7 @@
 
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>reader-services-ejb</artifactId>
+      <artifactId>reader-services</artifactId>
       <version>${project.version}</version>
     </dependency>
 

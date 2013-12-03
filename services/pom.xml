@@ -10,7 +10,7 @@
 	</parent>
 
 	<artifactId>reader-services</artifactId>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>Reader :: Services</name>
 
@@ -49,6 +49,12 @@
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>4.2.7.SP1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>rome</groupId>
+			<artifactId>rome</artifactId>
+			<version>1.0</version>
 		</dependency>
 
 	</dependencies>
